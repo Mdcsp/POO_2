@@ -1,0 +1,37 @@
+
+Clase Vendedor 
+	constante SueldoBase como real = 50000
+	definir nombre como caracter 
+	definir nroAutosVendidos como entero
+	definir totalventas como real
+	
+	metodo  LeerDatos()
+	
+	Mostrar "Introduzca el nombre del vendedor"
+	leer nombre 
+
+	Mostrar "Introduzca el numero de autos vendidos"
+	leer nroautosVendidos 
+	
+	fin metodo
+	
+	
+	metodo calcularSueldo()
+	mostrar "El sueldo del vendedor es"
+	mostrar sueldobase+nroAutosVendidos*200+totalVentas*0.15
+    fin metodo 
+	
+finclase
+
+
+Algoritmo 
+	definir vend1,vend2 como Vendedor 
+	vend1= nuevo Vendedor ()
+	vend2= nuevo Vendedor ()
+
+vend1.leerdatos()
+vend1.calcularSueldo ()
+
+vend2.leerdatos()
+vend2.calcularSueldo ()
+fin algoritmo

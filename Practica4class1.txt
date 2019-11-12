@@ -1,0 +1,89 @@
+Clase cliente
+	definir nombre como caracter 
+	definir precio_vehiculo como real  
+	definir monto_cuotas como real
+	
+	metodo registrocliente()
+	
+	Mostrar "Indique su nombre"
+    leer nombre 
+	
+	Mostrar "Indique el costo del vehiculo que desea"
+	leer precio_vehiculo 
+	
+	fin metodo 
+	
+	metodo cuotaInicial()
+	
+	 Mostrar "Su cuota inicial es"
+	 precio_vehiculo*0.3+(precio_vehiculo)
+	
+	fin metodo
+	
+	metodo montoCuotas ()
+	 Mostrar " La diferencia de las cuotas es de "
+	 montocuotas=
+	
+finclase
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	clase vehiculo
+	definir precio como real 
+ 
+ 
+	metodo LeerPrecio()
+	mostrar "Introduzca el precio del vehiculo"
+	leer precio 
+	fin metodo 
+ 
+	metodo calcularMontoinicial()
+	mostrar "El monto de las cuotas es " precio*0.7/24
+	fin metodo
+
+
+ fin clase 
+	
+	
+	clase cliente
+	definir nombre caracter
+	
+	metodo leerdatos()
+	Mostrar "Introduzca su nombre"
+	leer nombre 
+	fin metodo
+	
+Fin clase 
+
+	
+	
+algoritmo
+definir veh como Vehiculo
+definir cli como Cliente 
+
+veh=nuevo Vehiculo()
+cli=nuevo Cliente()
+
+cli.leerNombre()
+veh.leerPrecio()
+veh.calcularMontoInicial()
+veh.calcularMontoCuotas()
+
+finalgoritmo
+
+
+
