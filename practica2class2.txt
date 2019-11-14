@@ -1,0 +1,38 @@
+clase Alumno
+	definir nombre como caracter 
+	definir nota como numero
+	
+	metodo leerDatos()
+		mostrar "Int.nombre: "
+		leer nombre
+		mostrar "Int.nota: "
+		leer nota
+	fin metodo 
+	
+	metodo estaAprobado() como logico 
+		si nota >= 80 entonces 
+			retornar verdadero
+		sino 
+			retornar falso 
+		fin si 
+	fin metodo
+	
+	
+	fin clase 
+	
+	
+algoritmo 
+	definir alum como Alumno
+	alum= nuevo Alumno
+	
+	
+	alum.leerDatos ()
+	si alum.estaAprobado() entonces 
+		mostrar "felicitaciones,aprobaste!"
+		
+	sino 
+		mostrar "desde esforzarte mas"
+		
+	fin si 
+	
+fin algoritmo
