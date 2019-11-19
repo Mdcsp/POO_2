@@ -1,0 +1,127 @@
+clase Pantalon 
+		privado definir tipo como caracter 
+		privado definir precio como real 
+	
+				// LOS CICLOS,CODIGOS DEBEN ESTAR DENTRO DE LOS METODOS 
+	
+		publico metodo determinarPrecio() como real 
+		
+			si mayuscula(tipo) == "A" entonces 
+				retornar 141246
+				
+			sino 
+				si mayuscula(tipo) == "B" entomces 
+					retornar 96720
+				sino 
+					retornar 58900
+					
+				fin si 
+				
+				
+			fin si 	
+		
+		fin metodo 
+		
+fin clase 
+
+
+clase Cliente
+
+		privado definir nombre como caracter 
+		privado definir sexo como caracter 
+		
+		publico metodo esMujer() como logico   //metodo que retorna un logico 
+		
+			retornar mayuscula(sexo) == "F"    //si esto retorna un verdadero 
+			
+		fin metodo 
+		
+		publico metodo leerDatos()
+			mostrar "Introduzca el nombre: "
+			leer nombre 
+			
+			mostrar "Introduzca el sexo: "
+			leer sexo 
+		
+		fin metodo 
+	
+fin clase 
+
+
+clase Venta 
+
+	privado definir cliente como Cliente 
+	privado definir pantalon como Pantalon
+	privado definir cantidad como entero 
+
+	
+	privado metodo leerCantidad()
+	
+		mostrar "Introduzca la cantidad"
+		leer cantidad 
+		
+	fin metodo
+	
+	publico metodo calcularSubTotal() como real 
+		
+		retornar pantalon.determinarPrecio()*cantidad      //Se llamo al metodo determinarPrecio a traves del objeto pantalon que es objeto de la clase pantalon 
+		
+	fin metodo
+	
+	publico metodo calcularDescuento() como real            //Se coloca cuando es por retorno el tipo 
+	
+		si cliente.esMujer() y cantidad >6 entonces 
+		
+			retornar calcularsubTotal()*0.1
+		sino 
+			retornar 0
+			
+		fin si 
+	
+	
+	fin metodo
+	
+	
+	publico metodo procesarVenta()
+	
+		cliente.leerNombre()
+		pantalon.leerTipoPantalon()
+		leerCantidad()
+		
+	fin metodo 
+	
+	publico metodo mostrarTotal() como real 
+	
+		retornar calcularSubTotal*calcularDescuento+iva 
+		
+	fin metodo 
+	
+fin clase
+
+
+
+
+algoritmo tiendatraki 
+
+	definir v como Venta 
+	v= Nuevo Venta()
+	
+	
+	repetir
+		v.procesarVenta()                                          // Los ciclos pueden estar en el algoritmo principal y en los metodos 
+		
+		mostrar "el subtotal es " v.calcularSubTotal()
+		mostrar "el descuento es" v.calcularDescuento()
+		mostrar "el monto a pagar es " v.mostrarTotal()
+	
+	
+		leer repuesta 
+	
+	
+	hasta repuesta == "N" 
+	
+fin algoritmo 
+
+
+
+
